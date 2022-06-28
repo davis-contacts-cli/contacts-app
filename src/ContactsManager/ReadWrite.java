@@ -50,5 +50,10 @@ public class ReadWrite {
         }
     }
 
-    public static contacts =
+    public static Contact searchContact(String searchTerm) {
+        for (Contact contact :contacts){
+            contact = contact.getName.(searchTerm);
+
+        }
+    }
 }
