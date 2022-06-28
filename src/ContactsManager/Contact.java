@@ -1,12 +1,12 @@
 package ContactsManager;
 
-public class Contacts {
+public class Contact {
 
     private final String firstName;
     private final String lastName;
     private final String number;
 
-    public Contacts(String firstName, String lastName, String number) {
+    public Contact(String firstName, String lastName, String number) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.number = number;

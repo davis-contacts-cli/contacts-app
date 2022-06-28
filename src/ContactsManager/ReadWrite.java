@@ -15,7 +15,7 @@ public class ReadWrite {
 
     static List<String> contactList;
 
-    static ArrayList<Contacts> contacts = new ArrayList<>();
+    static ArrayList<Contact> contacts = new ArrayList<>();
 
     public static void createContacts(){
         try {
@@ -23,7 +23,7 @@ public class ReadWrite {
             for (String contact : contactList) {
                 String[] split = contact.split("\\|");
                 String[] name = split[0].split("\s");
-                contacts.add(new Contacts(name[0], name[1], split[1]));
+                contacts.add(new Contact(name[0], name[1], split[1]));
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -31,13 +31,13 @@ public class ReadWrite {
     }
 
     public static void readContacts(){
-        for (Contacts contact: contacts){
+        for (Contact contact: contacts){
             System.out.printf("Contact: %s at Number: %s\n",contact.getName(), contact.getNumber());
         }
     }
 
     public static void writeContact(String firstName, String lastName, String number){
-        contacts.add(new Contacts(firstName, lastName, number));
+        contacts.add(new Contact(firstName, lastName, number));
         String contactString = firstName + " " + lastName + "|" + number;
         try {
             Files.write(
@@ -50,4 +50,5 @@ public class ReadWrite {
         }
     }
 
+    public static contacts =
 }
