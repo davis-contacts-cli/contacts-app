@@ -41,7 +41,7 @@ public class ContactsManagerApp {
                 if (found == null){
                     System.out.println("Contact not found");
                 } else {
-                    System.out.printf("Name: %s, Number %s\n", found.getName(), found.getNumber());
+                    System.out.printf("%s | %s\n", found.getName(), found.getNumber());
                 }
                 System.out.println("Can I assist you further?\n1: Display all contacts\n2: Add new contact\n3: Delete contact\n4: Contact search\n5: Quit");
                 int searchChoice = input.nextInt();

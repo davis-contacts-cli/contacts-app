@@ -35,7 +35,7 @@ public class ReadWrite {
 
     public static void readContacts(){
         for (Contact contact: contacts){
-            System.out.printf("Contact: %s at Number: %s\n",contact.getName(), contact.getNumber());
+            System.out.printf("|%-20.20S | %20.15s|\n",contact.getName(), contact.getNumber());
         }
     }
 
